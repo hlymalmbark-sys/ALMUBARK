@@ -1,0 +1,875 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>شركة المبارك</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="شركة المبارك للتشطيبات والديكور والأعمال الخشبية — القاهرة، مدينة نصر، التجمع والمدن الجديدة">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&display=swap">
+<style>
+/* Layout: an architect's drawing sheet — thin gold dimension lines, plan-style section labels, material swatches instead of stock photos; RTL-first, mirrors for English */
+:root{
+  --paper:#F5F4F0; --surface:#FFFFFF; --sand:#E6DDCF; --sand-2:#D9CDB9;
+  --ink:#24221F; --muted:#6B665E; --line:#D8D2C7;
+  --gold:#9C7A43; --gold-soft:#C8AE7F; --on-gold:#FFFFFF;
+  --wood-1:#8A6243; --wood-2:#A47A57; --wood-3:#6E4B31;
+  --ok:#3F6B4E;
+  --f-display:"El Messiri","Noto Naskh Arabic","Times New Roman",serif;
+  --f-body:"IBM Plex Sans Arabic","Segoe UI",Tahoma,system-ui,sans-serif;
+  --r:4px; --maxw:1180px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#161514; --surface:#1F1D1B; --sand:#2B2723; --sand-2:#3A342D;
+  --ink:#EEE8DF; --muted:#A79F93; --line:#38332D;
+  --gold:#CDAE73; --gold-soft:#8E7449; --on-gold:#1A1712;
+  --wood-1:#7B5639; --wood-2:#94694A; --wood-3:#5C3E28; --ok:#7FB08F; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#161514; --surface:#1F1D1B; --sand:#2B2723; --sand-2:#3A342D;
+  --ink:#EEE8DF; --muted:#A79F93; --line:#38332D;
+  --gold:#CDAE73; --gold-soft:#8E7449; --on-gold:#1A1712;
+  --wood-1:#7B5639; --wood-2:#94694A; --wood-3:#5C3E28; --ok:#7FB08F; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--paper)}
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);font-weight:600;line-height:1.25;text-wrap:balance;margin:0}
+p{margin:0}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.num{font-variant-numeric:tabular-nums}
+
+/* header */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:20px;min-height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand svg{width:34px;height:34px;flex:none}
+.brand b{font-family:var(--f-display);font-size:22px;font-weight:700;letter-spacing:.01em}
+.brand small{display:block;font-size:11px;color:var(--muted);letter-spacing:.08em;line-height:1.2}
+nav.main{display:flex;gap:22px;margin-inline-start:auto}
+nav.main a{text-decoration:none;font-size:14.5px;color:var(--muted)}
+nav.main a:hover{color:var(--ink)}
+.lang{border:1px solid var(--line);background:transparent;border-radius:999px;padding:4px 12px;font-size:13px;cursor:pointer}
+.lang:hover{border-color:var(--gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:var(--r);padding:11px 20px;font-weight:500;font-size:15px;text-decoration:none;cursor:pointer;border:1px solid transparent;transition:background .2s,border-color .2s,color .2s}
+.btn-gold{background:var(--gold);color:var(--on-gold)}
+.btn-gold:hover{background:color-mix(in srgb,var(--gold) 85%,var(--ink))}
+.btn-line{border-color:var(--ink);background:transparent;color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--paper)}
+.top .btn{padding:8px 16px;font-size:14px}
+@media (max-width:900px){nav.main{display:none}.top .btn{margin-inline-start:auto}}
+@media (max-width:420px){.brand small{display:none}.top .wrap{gap:10px}}
+
+/* section scaffolding */
+section{padding-block:88px}
+.eyebrow{display:flex;align-items:center;gap:12px;font-size:12.5px;letter-spacing:.14em;color:var(--gold);font-weight:500;margin-bottom:14px}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--gold)}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:end;margin-bottom:44px}
+.sec-head h2{font-size:clamp(28px,4vw,42px)}
+.sec-head p{color:var(--muted);max-width:52ch}
+@media (max-width:760px){.sec-head{grid-template-columns:1fr;gap:12px}section{padding-block:64px}}
+
+/* hero */
+.hero{padding-block:56px 72px;border-bottom:1px solid var(--line)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:48px;align-items:center}
+.hero h1{font-size:clamp(36px,5.6vw,66px);font-weight:700;line-height:1.18}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero .lead{margin-top:20px;font-size:18px;color:var(--muted);max-width:46ch}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.hero .facts{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:34px;padding-top:22px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.hero .facts span{display:flex;align-items:center;gap:8px}
+.hero .facts span::before{content:"";width:6px;height:6px;border:1px solid var(--gold);transform:rotate(45deg)}
+.elev{position:relative;background:var(--surface);border:1px solid var(--line);padding:22px;min-width:0}
+.elev svg{display:block;width:100%;height:auto}
+.elev .cap{display:flex;justify-content:space-between;gap:12px;font-size:12px;color:var(--muted);margin-top:12px;letter-spacing:.04em}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}}
+
+/* workshop */
+.workshop{background:var(--sand)}
+.ws-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:56px;align-items:start}
+.ws-grid h2{font-size:clamp(28px,4vw,42px)}
+.ws-grid .copy p{margin-top:16px;color:var(--muted);max-width:52ch}
+.made{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:1px;background:var(--sand-2);border:1px solid var(--sand-2)}
+.made div{background:var(--sand);padding:18px 16px}
+.made b{display:block;font-family:var(--f-display);font-size:19px;font-weight:600}
+.made small{color:var(--muted);font-size:13px}
+@media (max-width:860px){.ws-grid{grid-template-columns:1fr;gap:28px}}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:0;border-top:1px solid var(--line)}
+.svc article{padding:28px 24px 30px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:44px minmax(0,1fr);gap:16px}
+[dir="rtl"] .svc article{padding:28px 0 30px 24px}
+.svc svg{width:40px;height:40px;stroke:var(--gold);fill:none;stroke-width:1.3}
+.svc h3{font-size:20px;margin-bottom:6px}
+.svc p{color:var(--muted);font-size:14.5px}
+
+/* projects */
+.proj{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.proj article{background:var(--surface);border:1px solid var(--line);display:flex;flex-direction:column}
+.mat{aspect-ratio:4/3;max-width:100%;position:relative;overflow:hidden}
+.mat .tag{position:absolute;inset-block-start:12px;inset-inline-start:12px;background:var(--paper);color:var(--muted);font-size:11px;padding:2px 9px;letter-spacing:.06em;border-radius:2px}
+.mat-wood{background:
+  repeating-linear-gradient(90deg,transparent 0 46px,rgba(0,0,0,.18) 46px 48px),
+  repeating-linear-gradient(90deg,var(--wood-1) 0 9px,var(--wood-2) 9px 15px,var(--wood-3) 15px 17px,var(--wood-2) 17px 26px)}
+.mat-marble{background:
+  radial-gradient(ellipse 60% 18% at 30% 35%,rgba(150,140,125,.35),transparent 70%),
+  radial-gradient(ellipse 50% 10% at 70% 70%,rgba(150,140,125,.3),transparent 70%),
+  linear-gradient(115deg,transparent 40%,rgba(140,128,110,.35) 41%,transparent 43%),
+  linear-gradient(160deg,#EDEAE4,#DCD7CE)}
+.mat-kitchen{background:
+  linear-gradient(var(--sand-2),var(--sand-2)) 0 38%/100% 4px no-repeat,
+  repeating-linear-gradient(90deg,#3B3936 0 calc(25% - 3px),#2A2826 calc(25% - 3px) 25%) 0 0/100% 36% no-repeat,
+  repeating-linear-gradient(90deg,#C9BFAF 0 calc(20% - 3px),#B8AD9B calc(20% - 3px) 20%) 0 100%/100% 56% no-repeat,#EDE9E2}
+.proj .body{padding:20px 20px 22px;display:flex;flex-direction:column;gap:12px;flex:1}
+.proj h3{font-size:20px}
+.spec{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 14px;font-size:13.5px;margin:0}
+.spec dt{color:var(--muted)}
+.spec dd{margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.chips span{font-size:12px;border:1px solid var(--line);padding:1px 10px;border-radius:999px;color:var(--muted)}
+.note{font-size:13px;color:var(--muted);margin-top:18px}
+@media (max-width:900px){.proj{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.proj{grid-template-columns:1fr}}
+
+/* tools */
+.tools{background:var(--surface);border-block:1px solid var(--line)}
+.tabs{display:flex;gap:0;border-bottom:1px solid var(--line);overflow-x:auto;margin-bottom:32px;scrollbar-width:none}
+.tabs button{background:none;border:0;border-bottom:2px solid transparent;padding:12px 18px;font-size:15px;color:var(--muted);cursor:pointer;white-space:nowrap;margin-bottom:-1px}
+.tabs button[aria-selected="true"]{color:var(--ink);border-color:var(--gold);font-weight:500}
+.panel{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:40px;align-items:start}
+@media (max-width:860px){.panel{grid-template-columns:1fr;gap:28px}}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fields .full{grid-column:1/-1}
+label.f{display:flex;flex-direction:column;gap:6px;font-size:13.5px;color:var(--muted);min-width:0}
+.f input,.f select,.f textarea{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:10px 12px;font-size:15px;color:var(--ink);width:100%;min-width:0}
+.f input:focus,.f select:focus,.f textarea:focus{border-color:var(--gold);outline:none}
+.unit{position:relative}
+.unit input{padding-inline-end:44px}
+.unit i{position:absolute;inset-inline-end:12px;top:50%;transform:translateY(-50%);font-style:normal;font-size:12.5px;color:var(--muted)}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg button{border:1px solid var(--line);background:var(--paper);border-radius:var(--r);padding:8px 12px;font-size:14px;cursor:pointer}
+.seg button[aria-pressed="true"]{border-color:var(--gold);background:color-mix(in srgb,var(--gold) 14%,var(--paper));color:var(--ink)}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.checks label{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--ink);cursor:pointer}
+.checks input{accent-color:var(--gold);width:16px;height:16px}
+.result{background:var(--paper);border:1px solid var(--line);padding:26px;min-width:0}
+.result h3{font-size:15px;font-family:var(--f-body);font-weight:500;color:var(--muted);letter-spacing:.04em}
+.big{font-family:var(--f-display);font-size:clamp(30px,4.2vw,44px);font-weight:700;line-height:1.2;margin-top:4px}
+.big small{font-size:.42em;color:var(--muted);font-weight:500;margin-inline-start:6px}
+.range{color:var(--muted);font-size:14px;margin-top:2px}
+.rows{margin-top:22px;display:flex;flex-direction:column;gap:12px}
+.row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;font-size:14px}
+.row .bar{grid-column:1/-1;height:4px;background:var(--line);border-radius:2px;overflow:hidden}
+.row .bar i{display:block;height:100%;background:var(--gold);border-radius:2px;transition:width .35s}
+.kv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:18px}
+.kv div{background:var(--paper);padding:14px 16px}
+.kv small{display:block;color:var(--muted);font-size:12.5px}
+.kv b{font-family:var(--f-display);font-size:24px;font-weight:600}
+.kv b span{font-size:13px;color:var(--muted);font-family:var(--f-body);font-weight:400;margin-inline-start:4px}
+.fine{font-size:12.5px;color:var(--muted);margin-top:16px;line-height:1.6}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+
+/* color tool */
+.sw-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px}
+.sw-grid button{aspect-ratio:1;max-width:100%;border:1px solid var(--line);border-radius:var(--r);cursor:pointer;position:relative}
+.sw-grid button[aria-pressed="true"]{outline:2px solid var(--gold);outline-offset:2px}
+.palette{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin-top:16px}
+.palette button{border:1px solid var(--line);background:var(--surface);padding:0;border-radius:var(--r);overflow:hidden;cursor:pointer;text-align:start}
+.palette i{display:block;height:54px}
+.palette span{display:block;padding:6px 8px;font-size:11.5px;line-height:1.35}
+.palette span b{display:block;font-weight:500;color:var(--ink)}
+.palette span em{font-style:normal;color:var(--muted);font-family:ui-monospace,Menlo,monospace;font-size:11px}
+.room svg{width:100%;height:auto;display:block;border:1px solid var(--line)}
+input[type=color]{width:100%;height:42px;padding:2px;border:1px solid var(--line);border-radius:var(--r);background:var(--paper);cursor:pointer}
+
+/* quiz */
+.q{display:flex;flex-direction:column;gap:22px}
+.q fieldset{border:0;padding:0;margin:0;min-width:0}
+.q legend{font-weight:500;margin-bottom:10px;font-size:15.5px}
+.style-swatches{display:flex;gap:0;margin:16px 0;height:40px;border:1px solid var(--line)}
+.style-swatches i{flex:1}
+.mat-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.mat-list span{font-size:13px;background:var(--surface);border:1px solid var(--line);padding:2px 10px;border-radius:999px}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;counter-reset:s}
+.steps li{list-style:none;padding:0 0 0 20px;border-inline-start:1px solid var(--line);padding-inline:20px;counter-increment:s}
+.steps li::before{content:counter(s,decimal-leading-zero);display:block;font-family:var(--f-display);color:var(--gold);font-size:28px;font-weight:600;margin-bottom:6px}
+.steps h3{font-size:18px;margin-bottom:6px}
+.steps p{font-size:14px;color:var(--muted)}
+.steps{padding:0;margin:0}
+@media (max-width:900px){.steps{grid-template-columns:1fr 1fr;row-gap:30px}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}}
+
+/* areas */
+.areas{background:var(--sand)}
+.area-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:48px;align-items:center}
+.area-list{display:flex;flex-direction:column}
+.area-list div{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid var(--sand-2)}
+.area-list b{font-family:var(--f-display);font-size:22px;font-weight:600}
+.area-list small{color:var(--muted);font-size:13.5px;text-align:end}
+.map svg{width:100%;height:auto;display:block}
+@media (max-width:860px){.area-grid{grid-template-columns:1fr}}
+
+/* guide */
+.guide{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px}
+.guide details{border-bottom:1px solid var(--line);padding:16px 0}
+.guide summary{cursor:pointer;font-weight:500;font-size:16.5px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.guide summary::after{content:"+";color:var(--gold);font-size:20px;line-height:1}
+.guide details[open] summary::after{content:"–"}
+.guide p{color:var(--muted);font-size:14.5px;margin-top:10px;max-width:60ch}
+@media (max-width:760px){.guide{grid-template-columns:1fr}}
+
+/* contact */
+.contact{background:var(--ink);color:var(--paper)}
+.contact .eyebrow{color:var(--gold-soft)}
+.contact .eyebrow::before{background:var(--gold-soft)}
+.ct-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:56px}
+.contact h2{font-size:clamp(28px,4vw,44px)}
+.contact .sub{color:color-mix(in srgb,var(--paper) 70%,var(--ink));margin-top:14px;max-width:44ch}
+.contact .lines{margin-top:30px;display:flex;flex-direction:column;gap:14px}
+.contact .lines div{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.contact .lines small{color:color-mix(in srgb,var(--paper) 60%,var(--ink));min-width:70px}
+.contact .lines b{font-weight:500;direction:ltr;unicode-bidi:isolate}
+.copy{background:none;border:1px solid color-mix(in srgb,var(--paper) 30%,var(--ink));color:inherit;border-radius:999px;padding:1px 10px;font-size:12px;cursor:pointer}
+.ct-form .f{color:color-mix(in srgb,var(--paper) 70%,var(--ink))}
+.ct-form .f input,.ct-form .f select,.ct-form .f textarea{background:color-mix(in srgb,var(--paper) 7%,var(--ink));border-color:color-mix(in srgb,var(--paper) 20%,var(--ink));color:var(--paper)}
+.ct-form .f select option{color:#222;background:#fff}
+.ct-form .btn-gold{background:var(--gold-soft);color:#1A1712}
+:root:not([data-theme="light"]) .contact{}
+.preview{margin-top:16px;font-size:13.5px;white-space:pre-wrap;background:color-mix(in srgb,var(--paper) 7%,var(--ink));border:1px dashed color-mix(in srgb,var(--paper) 25%,var(--ink));padding:14px;border-radius:var(--r)}
+@media (max-width:860px){.ct-grid{grid-template-columns:1fr;gap:32px}}
+
+footer{padding-block:28px;font-size:13px;color:var(--muted);border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+.wa-float{position:fixed;inset-block-end:calc(18px + env(safe-area-inset-bottom,0px));inset-inline-end:calc(18px + env(safe-area-inset-right,0px));z-index:40;width:56px;height:56px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 6px 20px rgba(0,0,0,.18);text-decoration:none}
+[dir="rtl"] .wa-float{inset-inline-end:calc(18px + env(safe-area-inset-left,0px))}
+.wa-float svg{width:28px;height:28px;fill:#fff}
+.toast{position:fixed;inset-block-end:calc(90px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);background:var(--ink);color:var(--paper);padding:8px 16px;border-radius:999px;font-size:13.5px;z-index:70;opacity:0;pointer-events:none;transition:opacity .25s}
+.toast.on{opacity:1}
+</style>
+<style>[hidden]{display:none!important}img{max-width:100%}body{margin:0}</style>
+</head>
+<body>
+
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#home" aria-label="المبارك">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" fill="none" stroke="var(--gold)" stroke-width="1.5"/><path d="M8 32V14l12-7 12 7v18" fill="none" stroke="var(--ink)" stroke-width="1.6"/><path d="M15 32V21h10v11M8 32h24" fill="none" stroke="var(--gold)" stroke-width="1.6"/></svg>
+      <span><b data-t="brand">المبارك</b><small data-t="brandSub">تشطيبات · ديكور · أخشاب</small></span>
+    </a>
+    <nav class="main" aria-label="main">
+      <a href="#services" data-t="navServices">خدماتنا</a>
+      <a href="#projects" data-t="navProjects">أعمالنا</a>
+      <a href="#tools" data-t="navTools">أدوات العميل</a>
+      <a href="#areas" data-t="navAreas">مناطق العمل</a>
+      <a href="#guide" data-t="navGuide">دليل التشطيب</a>
+    </nav>
+    <button class="lang" id="langBtn" type="button">English</button>
+    <a class="btn btn-gold" href="#contact" data-t="navCta">اطلب معاينة</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow" data-t="heroEyebrow">شقق وفيلات · القاهرة الجديدة ومدينة نصر</div>
+      <h1 data-t="heroTitle" data-html>تشطيب وأثاث<br>من <em>ورشة واحدة</em><br>لحد تسليم المفتاح</h1>
+      <p class="lead" data-t="heroLead">من المحارة والكهرباء لحد المطبخ والدريسنج وتجاليد الحوائط — كل أعمال الخشب بنصنعها في ورشتنا، فتستلم بيتك متناسق وبمسؤولية جهة واحدة.</p>
+      <div class="ctas">
+        <a class="btn btn-gold" href="#tools" data-t="ctaCost" id="ctaCost">احسب تكلفة التشطيب</a>
+        <a class="btn btn-line" href="#projects" data-t="ctaWork">استكشف أعمالنا</a>
+      </div>
+      <div class="facts">
+        <span data-t="fact1">ورشة أخشاب خاصة</span>
+        <span data-t="fact2">مقايسة مكتوبة بالبنود</span>
+        <span data-t="fact3">معاينة في موقعك</span>
+      </div>
+    </div>
+    <figure class="elev" aria-label="elevation">
+      <svg viewBox="0 0 520 380" role="img" aria-labelledby="elevT">
+        <title id="elevT">Wall elevation drawing</title>
+        <defs>
+          <pattern id="slats" width="18" height="10" patternUnits="userSpaceOnUse"><rect width="14" height="10" fill="var(--wood-2)"/><rect x="14" width="4" height="10" fill="var(--wood-3)"/></pattern>
+        </defs>
+        <rect x="40" y="30" width="440" height="300" fill="var(--paper)" stroke="var(--ink)" stroke-width="1.2"/>
+        <rect x="40" y="30" width="170" height="300" fill="url(#slats)"/>
+        <rect x="230" y="70" width="230" height="10" fill="var(--sand-2)"/>
+        <rect x="248" y="96" width="194" height="120" fill="var(--surface)" stroke="var(--muted)" stroke-width="1"/>
+        <rect x="258" y="106" width="174" height="100" fill="var(--sand)"/>
+        <rect x="230" y="250" width="230" height="80" fill="var(--wood-1)"/>
+        <line x1="230" y1="290" x2="460" y2="290" stroke="var(--wood-3)"/>
+        <line x1="345" y1="250" x2="345" y2="330" stroke="var(--wood-3)"/>
+        <circle cx="335" cy="270" r="2.5" fill="var(--gold)"/><circle cx="355" cy="270" r="2.5" fill="var(--gold)"/>
+        <line x1="30" y1="330" x2="490" y2="330" stroke="var(--ink)" stroke-width="2"/>
+        <!-- dimension lines -->
+        <g stroke="var(--gold)" stroke-width="1" fill="none">
+          <line x1="40" y1="352" x2="480" y2="352"/><line x1="40" y1="346" x2="40" y2="358"/><line x1="480" y1="346" x2="480" y2="358"/>
+          <line x1="40" y1="14" x2="210" y2="14"/><line x1="40" y1="8" x2="40" y2="20"/><line x1="210" y1="8" x2="210" y2="20"/>
+          <line x1="500" y1="30" x2="500" y2="330"/><line x1="494" y1="30" x2="506" y2="30"/><line x1="494" y1="330" x2="506" y2="330"/>
+        </g>
+        <g fill="var(--muted)" font-size="11" font-family="IBM Plex Sans Arabic, sans-serif" text-anchor="middle">
+          <text x="260" y="370" class="num">4.40 m</text>
+          <text x="125" y="10" class="num">1.70 m</text>
+          <text x="514" y="184" transform="rotate(90 514 184)" class="num">3.00 m</text>
+        </g>
+      </svg>
+      <figcaption class="cap"><span data-t="elevCap1">قطاع حائط ريسبشن — تجليد خشب + وحدة تلفزيون</span><span>A-02</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="workshop" id="about">
+  <div class="wrap ws-grid">
+    <div class="copy">
+      <div class="eyebrow" data-t="wsEyebrow">ليه المبارك</div>
+      <h2 data-t="wsTitle">الخشب عندنا مش مقاول باطن</h2>
+      <p data-t="wsP1">أغلب شركات التشطيب بتسلّم المطبخ والدريسنج لورش برّه، وده بيعمل فرق في المقاسات والتشطيب والمواعيد. إحنا بنصنّع كل قطعة خشب في ورشتنا، فالتصميم والتنفيذ والتركيب تحت إيد واحدة.</p>
+      <p data-t="wsP2">النتيجة: ألوان وخامات متناسقة في البيت كله، ومقاسات مظبوطة على الطبيعة، وضمان من جهة واحدة.</p>
+    </div>
+    <div class="made" aria-label="in-house">
+      <div><b data-t="m1">مطابخ</b><small data-t="m1s">HPL · أكريليك · خشب طبيعي</small></div>
+      <div><b data-t="m2">دريسنج</b><small data-t="m2s">مفتوح ومقفول بإضاءة</small></div>
+      <div><b data-t="m3">غرف نوم</b><small data-t="m3s">سراير ودواليب وكومودينو</small></div>
+      <div><b data-t="m4">سفرة</b><small data-t="m4s">ترابيزات وبوفيهات</small></div>
+      <div><b data-t="m5">ريسبشن ومداخل</b><small data-t="m5s">وحدات تلفزيون وكونسول</small></div>
+      <div><b data-t="m6">تجاليد حوائط</b><small data-t="m6s">بديل خشب وخشب طبيعي</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="eyebrow" data-t="svEyebrow">خدماتنا</div><h2 data-t="svTitle">كل مراحل التشطيب في عقد واحد</h2></div>
+      <p data-t="svLead">تقدر تطلب تشطيب كامل لحد تسليم المفتاح، أو بنود منفصلة حسب حالة وحدتك.</p>
+    </div>
+    <div class="svc">
+      <article><svg viewBox="0 0 40 40"><path d="M6 34h28M10 34V12l10-6 10 6v22M16 34V22h8v12"/></svg><div><h3 data-t="s1">تشطيب كامل تسليم مفتاح</h3><p data-t="s1p">من استلام الوحدة على الطوب لحد آخر قطعة أثاث، بجدول زمني ومقايسة مكتوبة.</p></div></article>
+      <article><svg viewBox="0 0 40 40"><rect x="6" y="6" width="28" height="28"/><path d="M6 18h14v16M20 6v6"/></svg><div><h3 data-t="s2">تصميم داخلي وديكور</h3><p data-t="s2p">مخطط توزيع، لوحة خامات وألوان، وتصميم ثلاثي الأبعاد قبل التنفيذ.</p></div></article>
+      <article><svg viewBox="0 0 40 40"><path d="M22 4L10 22h9l-2 14 13-19h-9z"/></svg><div><h3 data-t="s3">كهرباء وسباكة</h3><p data-t="s3p">تأسيس كامل بخامات معتمدة، ولوحات كهرباء موزعة على أحمال الوحدة.</p></div></article>
+      <article><svg viewBox="0 0 40 40"><path d="M4 12h32M8 12v6h24v-6M14 18v4h12v-4"/><path d="M4 30h32"/></svg><div><h3 data-t="s4">محارة وجبس بورد وأسقف</h3><p data-t="s4p">محارة على القدة والزاوية، أسقف معلقة وبيوت نور وإضاءة مخفية.</p></div></article>
+      <article><svg viewBox="0 0 40 40"><path d="M4 30l16-8 16 8-16 8zM4 30v-4l16-8 16 8v4"/></svg><div><h3 data-t="s5">أرضيات وسيراميك ورخام</h3><p data-t="s5p">بورسلين، رخام، باركيه وHDF — مع ميول مظبوطة في الحمامات والمطابخ.</p></div></article>
+      <article><svg viewBox="0 0 40 40"><rect x="8" y="4" width="20" height="10" rx="1"/><path d="M28 9h4v8H18v5M16 22h4v14h-4z"/></svg><div><h3 data-t="s6">دهانات وديكورات حوائط</h3><p data-t="s6p">دهانات بلاستيك وقطيفة، ورق حائط، وتجاليد خشب وبديل رخام.</p></div></article>
+      <article><svg viewBox="0 0 40 40"><rect x="4" y="16" width="32" height="18"/><path d="M4 24h32M20 16v18M8 6h24v6H8z"/></svg><div><h3 data-t="s7">مطابخ ووحدات تخزين</h3><p data-t="s7p">تصنيع في ورشتنا بإكسسوارات ومفصلات هيدروليك وتشطيب حسب اختيارك.</p></div></article>
+      <article><svg viewBox="0 0 40 40"><path d="M6 6h28v28H6zM20 6v28M14 18v4M26 18v4"/></svg><div><h3 data-t="s8">دريسنج وغرف نوم وأثاث كامل</h3><p data-t="s8p">أثاث مقاس على المكان، متناسق مع أبواب الوحدة وتجاليدها.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="projects" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="eyebrow" data-t="pjEyebrow">سابقة الأعمال</div><h2 data-t="pjTitle">مشروعات من القاهرة الجديدة ومدينة نصر</h2></div>
+      <p data-t="pjLead">كل مشروع له صفحة فيها صور قبل وبعد، مراحل التنفيذ، والخامات اللي اتستخدمت.</p>
+    </div>
+    <div class="proj">
+      <article>
+        <div class="mat mat-wood"><span class="tag" data-t="sample">مثال</span></div>
+        <div class="body">
+          <h3 data-t="p1">شقة — التجمع الخامس</h3>
+          <dl class="spec num"><dt data-t="dArea">المساحة</dt><dd>185 m²</dd><dt data-t="dLevel">المستوى</dt><dd data-t="lux">لوكس</dd><dt data-t="dTime">المدة</dt><dd data-t="p1t">4 شهور</dd></dl>
+          <div class="chips"><span data-t="c1">تشطيب كامل</span><span data-t="c2">تجاليد خشب</span><span data-t="c3">مطبخ</span></div>
+        </div>
+      </article>
+      <article>
+        <div class="mat mat-marble"><span class="tag" data-t="sample">مثال</span></div>
+        <div class="body">
+          <h3 data-t="p2">فيلا — مدينة الشروق</h3>
+          <dl class="spec num"><dt data-t="dArea">المساحة</dt><dd>340 m²</dd><dt data-t="dLevel">المستوى</dt><dd data-t="slux">سوبر لوكس</dd><dt data-t="dTime">المدة</dt><dd data-t="p2t">7 شهور</dd></dl>
+          <div class="chips"><span data-t="c4">رخام</span><span data-t="c5">أسقف معلقة</span><span data-t="c6">دريسنج</span></div>
+        </div>
+      </article>
+      <article>
+        <div class="mat mat-kitchen"><span class="tag" data-t="sample">مثال</span></div>
+        <div class="body">
+          <h3 data-t="p3">مطبخ — مدينة نصر</h3>
+          <dl class="spec num"><dt data-t="dLen">الطول</dt><dd>5.2 m</dd><dt data-t="dMat">الخامة</dt><dd data-t="p3m">أكريليك + كوارتز</dd><dt data-t="dTime">المدة</dt><dd data-t="p3t">3 أسابيع</dd></dl>
+          <div class="chips"><span data-t="c7">تصنيع بالورشة</span><span data-t="c8">إضاءة LED</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="tools" id="tools">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="eyebrow" data-t="tlEyebrow">أدوات العميل</div><h2 data-t="tlTitle">خطط لتشطيبك قبل ما تكلمنا</h2></div>
+      <p data-t="tlLead">احسب المساحات والتكلفة التقديرية، نسّق ألوانك، واعرف الستايل الأقرب لذوقك — وابعت النتيجة لنا على واتساب بضغطة.</p>
+    </div>
+
+    <div class="tabs" role="tablist">
+      <button role="tab" id="tab-cost" aria-controls="pn-cost" aria-selected="true" data-t="tabCost">حاسبة التكلفة</button>
+      <button role="tab" id="tab-area" aria-controls="pn-area" aria-selected="false" data-t="tabArea">حاسبة المساحات</button>
+      <button role="tab" id="tab-color" aria-controls="pn-color" aria-selected="false" data-t="tabColor">منسق الألوان</button>
+      <button role="tab" id="tab-style" aria-controls="pn-style" aria-selected="false" data-t="tabStyle">اختار الستايل</button>
+    </div>
+
+    <!-- COST -->
+    <div class="panel" role="tabpanel" id="pn-cost" aria-labelledby="tab-cost">
+      <div class="fields">
+        <div class="f full"><span style="font-size:13.5px;color:var(--muted)" data-t="unitType">نوع الوحدة</span>
+          <div class="seg" id="unitSeg" style="margin-top:6px">
+            <button type="button" data-v="apt" aria-pressed="true" data-t="apt">شقة</button>
+            <button type="button" data-v="duplex" aria-pressed="false" data-t="duplex">دوبلكس</button>
+            <button type="button" data-v="villa" aria-pressed="false" data-t="villa">فيلا</button>
+          </div></div>
+        <label class="f"><span data-t="areaM">المساحة</span><span class="unit"><input id="cArea" type="number" min="20" max="2000" value="150" inputmode="decimal"><i>m²</i></span></label>
+        <label class="f"><span data-t="level">مستوى التشطيب</span><select id="cLevel">
+          <option value="eco" data-t="eco">اقتصادي</option><option value="mid" data-t="mid">متوسط</option><option value="lux" selected data-t="lux">لوكس</option><option value="slux" data-t="slux">سوبر لوكس</option></select></label>
+        <div class="f full"><span data-t="items">البنود المطلوبة</span>
+          <div class="checks" id="cItems" style="margin-top:6px"></div></div>
+        <label class="f"><span data-t="kitchenLen">طول المطبخ</span><span class="unit"><input id="cKitchen" type="number" min="0" max="30" step="0.1" value="4" inputmode="decimal"><i data-t="mLin">م.ط</i></span></label>
+        <label class="f"><span data-t="kitchenMat">خامة المطبخ</span><select id="cKMat"><option value="hpl" data-t="hpl">HPL</option><option value="acr" selected data-t="acr">أكريليك</option><option value="wood" data-t="woodNat">خشب طبيعي</option></select></label>
+        <label class="f"><span data-t="dressing">واجهة الدريسنج / الدواليب</span><span class="unit"><input id="cDress" type="number" min="0" max="60" step="0.5" value="6" inputmode="decimal"><i>m²</i></span></label>
+        <label class="f"><span data-t="claddings">تجاليد حوائط</span><span class="unit"><input id="cClad" type="number" min="0" max="200" step="0.5" value="8" inputmode="decimal"><i>m²</i></span></label>
+      </div>
+      <div class="result" aria-live="polite">
+        <h3 data-t="estTotal">التكلفة التقديرية</h3>
+        <div class="big num" id="cTotal">—</div>
+        <div class="range num" id="cRange"></div>
+        <div class="rows" id="cRows"></div>
+        <p class="fine" data-t="costNote">تقدير استرشادي بأسعار السوق في القاهرة، وليس عرض سعر نهائي. السعر النهائي بيتحدد بعد المعاينة وتحديد الخامات والماركات.</p>
+        <div class="actions"><a class="btn btn-gold" id="cSend" href="#" target="_blank" rel="noopener" data-t="sendWa">ابعت التقدير على واتساب</a><button class="btn btn-line" type="button" id="cCopy" data-t="copyRes">انسخ النتيجة</button></div>
+      </div>
+    </div>
+
+    <!-- AREA -->
+    <div class="panel" role="tabpanel" id="pn-area" aria-labelledby="tab-area" hidden>
+      <div class="fields">
+        <label class="f"><span data-t="len">الطول</span><span class="unit"><input id="aL" type="number" min="0.5" step="0.05" value="5" inputmode="decimal"><i>m</i></span></label>
+        <label class="f"><span data-t="wid">العرض</span><span class="unit"><input id="aW" type="number" min="0.5" step="0.05" value="4" inputmode="decimal"><i>m</i></span></label>
+        <label class="f"><span data-t="hei">ارتفاع السقف</span><span class="unit"><input id="aH" type="number" min="2" step="0.05" value="2.9" inputmode="decimal"><i>m</i></span></label>
+        <label class="f"><span data-t="doors">عدد الأبواب</span><input id="aD" type="number" min="0" max="10" value="1" inputmode="numeric"></label>
+        <label class="f"><span data-t="wins">عدد الشبابيك</span><input id="aWin" type="number" min="0" max="10" value="1" inputmode="numeric"></label>
+        <label class="f"><span data-t="tile">مقاس البلاط</span><select id="aTile"><option value="0.36">60×60</option><option value="0.72">60×120</option><option value="0.64">80×80</option><option value="0.18">30×60</option></select></label>
+        <label class="f"><span data-t="coats">أوجه الدهان</span><select id="aCoats"><option value="2">2</option><option value="3" selected>3</option></select></label>
+        <label class="f"><span data-t="waste">نسبة الهالك</span><select id="aWaste"><option value="0.07">7%</option><option value="0.10" selected>10%</option><option value="0.15">15%</option></select></label>
+        <p class="fine full" data-t="areaNote">بنخصم 1.9 م² لكل باب و1.5 م² لكل شباك من مساحة الحوائط. فرد الدهان محسوب على 10 م² للتر للوجه الواحد.</p>
+      </div>
+      <div class="result" aria-live="polite">
+        <h3 data-t="floorArea">مساحة الأرضية</h3>
+        <div class="big num" id="aFloor">—</div>
+        <div class="kv num">
+          <div><small data-t="wallNet">صافي الحوائط</small><b id="aWalls">—</b></div>
+          <div><small data-t="ceil">السقف</small><b id="aCeil">—</b></div>
+          <div><small data-t="paintL">دهان (حوائط + سقف)</small><b id="aPaint">—</b></div>
+          <div><small data-t="tilesNeed">بلاط بالهالك</small><b id="aTiles">—</b></div>
+          <div><small data-t="plaster">محارة</small><b id="aPlast">—</b></div>
+          <div><small data-t="skirt">وزرة</small><b id="aSkirt">—</b></div>
+        </div>
+        <p class="fine" data-t="areaNote2">الأرقام لغرفة واحدة مستطيلة. للغرف غير المنتظمة قسّمها لمستطيلات واجمعها.</p>
+      </div>
+    </div>
+
+    <!-- COLOR -->
+    <div class="panel" role="tabpanel" id="pn-color" aria-labelledby="tab-color" hidden>
+      <div class="fields">
+        <div class="f full"><span data-t="pickBase">اختار لون الحائط الأساسي</span>
+          <div class="sw-grid" id="swatches" style="margin-top:8px"></div></div>
+        <label class="f"><span data-t="custom">أو لون من اختيارك</span><input type="color" id="colPick" value="#d8cbb6"></label>
+        <div class="f"><span data-t="scheme">نوع التنسيق</span>
+          <div class="seg" id="schemeSeg" style="margin-top:6px">
+            <button type="button" data-v="calm" aria-pressed="true" data-t="calm">هادئ</button>
+            <button type="button" data-v="warm" aria-pressed="false" data-t="harm">متناغم</button>
+            <button type="button" data-v="bold" aria-pressed="false" data-t="contrast">متباين</button>
+          </div></div>
+        <div class="full"><div class="palette" id="palette"></div><p class="fine" data-t="palNote">اضغط على أي لون لنسخ كوده. الألوان على الشاشة بتختلف عن الحائط — اطلب عينة دهان قبل الاعتماد.</p></div>
+      </div>
+      <div class="result room">
+        <h3 data-t="roomPrev">معاينة على غرفة معيشة</h3>
+        <svg viewBox="0 0 600 400" id="roomSvg" role="img" aria-label="room preview" style="margin-top:12px">
+          <polygon id="rCeil" points="0,0 600,0 470,60 130,60"/>
+          <polygon id="rLeft" points="0,0 130,60 130,300 0,400"/>
+          <polygon id="rRight" points="600,0 470,60 470,300 600,400"/>
+          <rect id="rBack" x="130" y="60" width="340" height="240"/>
+          <polygon id="rFloor" points="130,300 470,300 600,400 0,400"/>
+          <g id="rFloorLines" stroke-width="1" opacity=".25"></g>
+          <rect id="rPanel" x="300" y="60" width="90" height="240"/>
+          <rect id="rFrame" x="175" y="105" width="80" height="60" fill="none" stroke-width="3"/>
+          <rect id="rArt" x="181" y="111" width="68" height="48"/>
+          <polygon id="rRug" points="200,318 420,318 470,370 150,370"/>
+          <rect id="rSofaBack" x="170" y="232" width="190" height="50" rx="6"/>
+          <rect id="rSofa" x="160" y="268" width="210" height="40" rx="6"/>
+          <rect id="rPillow" x="190" y="245" width="38" height="28" rx="4"/>
+          <rect x="166" y="306" width="8" height="10" fill="#3a332c"/><rect x="356" y="306" width="8" height="10" fill="#3a332c"/>
+          <rect id="rTable" x="392" y="262" width="50" height="40"/>
+          <path id="rLamp" d="M405 262 v-40 M392 222 h26 l-5 -18 h-16z" stroke-width="2"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- STYLE -->
+    <div class="panel" role="tabpanel" id="pn-style" aria-labelledby="tab-style" hidden>
+      <form class="q" id="quiz"></form>
+      <div class="result" aria-live="polite">
+        <h3 data-t="yourStyle">الستايل الأقرب لذوقك</h3>
+        <div class="big" id="sName">—</div>
+        <p id="sDesc" style="color:var(--muted);margin-top:8px"></p>
+        <div class="style-swatches" id="sSw"></div>
+        <small style="color:var(--muted)" data-t="keyMats">خامات مقترحة</small>
+        <div class="mat-list" id="sMats"></div>
+        <div class="actions"><a class="btn btn-gold" id="sSend" href="#" target="_blank" rel="noopener" data-t="sendWa2">ابعت النتيجة على واتساب</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="eyebrow" data-t="prEyebrow">طريقة الشغل</div><h2 data-t="prTitle">من أول مكالمة لحد تسليم المفتاح</h2></div>
+      <p data-t="prLead">كل مرحلة بتتسلم وتتوقع عليها قبل اللي بعدها، فتعرف بالظبط إيه اللي اتعمل وإيه اللي جاي.</p>
+    </div>
+    <ol class="steps">
+      <li><h3 data-t="st1">معاينة</h3><p data-t="st1p">زيارة للموقع، رفع مقاسات، وفهم احتياجاتك وميزانيتك.</p></li>
+      <li><h3 data-t="st2">تصميم</h3><p data-t="st2p">مخطط وتوزيع وتصميم ثلاثي الأبعاد ولوحة خامات.</p></li>
+      <li><h3 data-t="st3">مقايسة وعقد</h3><p data-t="st3p">أسعار مكتوبة بالبند والخامة والماركة، وجدول زمني.</p></li>
+      <li><h3 data-t="st4">تنفيذ</h3><p data-t="st4p">مهندس موقع ومتابعة بصور أسبوعية، وتصنيع الخشب بالتوازي في الورشة.</p></li>
+      <li><h3 data-t="st5">تسليم وضمان</h3><p data-t="st5p">استلام بند ببند، وضمان مكتوب على التنفيذ والأخشاب.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="areas" id="areas">
+  <div class="wrap area-grid">
+    <div>
+      <div class="eyebrow" data-t="arEyebrow">مناطق العمل</div>
+      <h2 style="font-size:clamp(28px,4vw,42px);margin-bottom:22px" data-t="arTitle">بنشتغل شرق القاهرة والمدن الجديدة</h2>
+      <div class="area-list">
+        <div><b data-t="ar1">مدينة نصر</b><small data-t="ar1s">كل الأحياء والمناطق</small></div>
+        <div><b data-t="ar2">القاهرة الجديدة</b><small data-t="ar2s">التجمع الخامس · الأول · الرحاب · مدينتي</small></div>
+        <div><b data-t="ar3">المدن الجديدة</b><small data-t="ar3s">الشروق · بدر · المستقبل · العاصمة الإدارية</small></div>
+      </div>
+    </div>
+    <div class="map" aria-hidden="true">
+      <svg viewBox="0 0 400 300">
+        <path d="M20 250 C80 220 90 160 70 100 C60 60 80 30 110 20" fill="none" stroke="var(--sand-2)" stroke-width="10" stroke-linecap="round"/>
+        <g fill="none" stroke="var(--gold)" stroke-width="1" stroke-dasharray="4 4"><path d="M150 130 L240 175 L330 120"/><path d="M240 175 L300 230"/></g>
+        <g font-family="IBM Plex Sans Arabic, sans-serif" font-size="13" fill="var(--ink)" text-anchor="middle">
+          <circle cx="150" cy="130" r="8" fill="var(--gold)"/><text x="150" y="112" id="mNasr">مدينة نصر</text>
+          <circle cx="240" cy="175" r="10" fill="var(--gold)"/><text x="240" y="205" id="mNew">القاهرة الجديدة</text>
+          <circle cx="330" cy="120" r="7" fill="var(--paper)" stroke="var(--gold)" stroke-width="2"/><text x="330" y="102" id="mShor">الشروق</text>
+          <circle cx="300" cy="230" r="7" fill="var(--paper)" stroke="var(--gold)" stroke-width="2"/><text x="300" y="258" id="mCap">العاصمة الإدارية</text>
+        </g>
+        <text x="58" y="280" font-size="11" fill="var(--muted)" font-family="IBM Plex Sans Arabic, sans-serif" id="mNile">النيل</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="guide">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="eyebrow" data-t="gdEyebrow">دليل التشطيب</div><h2 data-t="gdTitle">أسئلة بنسمعها كل أسبوع</h2></div>
+      <p data-t="gdLead">إجابات مختصرة تساعدك تاخد قرار أوضح قبل ما تبدأ.</p>
+    </div>
+    <div class="guide">
+      <details><summary data-t="g1">إيه الفرق بين لوكس وسوبر لوكس؟</summary><p data-t="g1p">الفرق في الخامات أكتر من الشغل: نوع البورسلين أو الرخام، ماركة الأدوات الصحية والكهربا، ونوع الدهان والأسقف. المقايسة عندنا بتكتب الماركة لكل بند عشان تقارن صح.</p></details>
+      <details><summary data-t="g2">التشطيب الكامل بياخد قد إيه؟</summary><p data-t="g2p">شقة 150 م² غالباً من 3 لـ 5 شهور حسب المستوى. الفيلات من 6 شهور وأكتر. تصنيع الخشب في الورشة بيمشي بالتوازي مع الموقع فبيوفر وقت.</p></details>
+      <details><summary data-t="g3">أبدأ بالمطبخ ولا بالأرضيات؟</summary><p data-t="g3p">الترتيب الصح: تأسيس كهربا وسباكة، محارة، أسقف، أرضيات، دهان أوجه أولى، تركيب الخشب والمطبخ، ثم الوش الأخير. رفع مقاسات المطبخ بيكون بعد المحارة والسيراميك.</p></details>
+      <details><summary data-t="g4">HPL ولا أكريليك ولا خشب طبيعي للمطبخ؟</summary><p data-t="g4p">HPL أقوى ضد الخدش وسعره أقل. الأكريليك لامع وسهل التنظيف لكنه بيبان عليه الخدش. الخشب الطبيعي أفخم وعمره أطول ومحتاج صيانة أكتر.</p></details>
+      <details><summary data-t="g5">إزاي أتجنب زيادة التكلفة أثناء التنفيذ؟</summary><p data-t="g5p">اعتمد التصميم والخامات قبل البدء، واطلب مقايسة بالبند والكمية والماركة. أي تعديل بعد كده يتكتب في ملحق بسعره قبل تنفيذه.</p></details>
+      <details><summary data-t="g6">الدفع بيكون إزاي؟</summary><p data-t="g6p">دفعات مرتبطة بمراحل التنفيذ: مقدم عند التعاقد، ودفعة عند تسليم كل مرحلة، وآخر دفعة بعد الاستلام النهائي.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap ct-grid">
+    <div>
+      <div class="eyebrow" data-t="ctEyebrow">تواصل معنا</div>
+      <h2 data-t="ctTitle">احجز معاينة في موقعك</h2>
+      <p class="sub" data-t="ctSub">املا البيانات وهتتفتح رسالة واتساب جاهزة. بنرد في نفس يوم العمل.</p>
+      <div class="lines">
+        <div><small data-t="whatsapp">واتساب</small><b id="waNum"></b><button class="copy" type="button" data-copy="phone" data-t="copy">نسخ</button></div>
+        <div><small data-t="hours">المواعيد</small><span data-t="hoursV">السبت – الخميس · 10 ص – 8 م</span></div>
+      </div>
+    </div>
+    <form class="ct-form fields" id="ctForm" novalidate>
+      <label class="f"><span data-t="fName">الاسم</span><input id="fName" required autocomplete="name"></label>
+      <label class="f"><span data-t="fPhone">رقم الموبايل</span><input id="fPhone" type="tel" required autocomplete="tel" inputmode="tel" dir="ltr"></label>
+      <label class="f"><span data-t="fArea">المنطقة</span><select id="fArea"><option data-t="ar1">مدينة نصر</option><option data-t="ar2">القاهرة الجديدة</option><option data-t="ar3">المدن الجديدة</option><option data-t="other">أخرى</option></select></label>
+      <label class="f"><span data-t="unitType">نوع الوحدة</span><select id="fUnit"><option data-t="apt">شقة</option><option data-t="duplex">دوبلكس</option><option data-t="villa">فيلا</option></select></label>
+      <label class="f full"><span data-t="fService">الخدمة</span><select id="fService"><option data-t="s1">تشطيب كامل تسليم مفتاح</option><option data-t="s2">تصميم داخلي وديكور</option><option data-t="s7">مطابخ ووحدات تخزين</option><option data-t="s8">دريسنج وغرف نوم وأثاث كامل</option><option data-t="other">أخرى</option></select></label>
+      <label class="f full"><span data-t="fNotes">تفاصيل إضافية</span><textarea id="fNotes" rows="3"></textarea></label>
+      <div class="full actions" style="margin-top:4px"><button class="btn btn-gold" type="submit" data-t="fSubmit">جهّز رسالة واتساب</button></div>
+      <p class="fine full" id="fErr" hidden style="color:#E8A88F"></p>
+      <div class="full" id="fOut" hidden>
+        <div class="preview" id="fPrev"></div>
+        <div class="actions"><a class="btn btn-gold" id="fWa" target="_blank" rel="noopener" data-t="openWa">افتح واتساب</a><button class="btn btn-line" style="border-color:var(--paper);color:var(--paper)" type="button" id="fCopy" data-t="copyMsg">انسخ الرسالة</button></div>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span data-t="foot">© 2026 المبارك للتشطيبات والديكور والأعمال الخشبية</span><span data-t="foot2">مدينة نصر · القاهرة الجديدة · المدن الجديدة</span></div></footer>
+
+<a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg></a>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+/* ============ إعدادات قابلة للتعديل ============ */
+const CONFIG = {
+  whatsapp: "201111231289",          // رقم الواتساب بالصيغة الدولية بدون +
+  phoneDisplay: "0111 123 1289",  // الرقم كما يظهر للعميل
+  // سعر المتر المربع للتشطيب الكامل (جنيه / م² من مساحة الوحدة) — تقديري، أكتوبر 2026
+  levelRate: { eco: 6500, mid: 9500, lux: 13500, slux: 19500 },
+  // نصيب كل بند من سعر التشطيب الكامل
+  shares: { plaster: .11, electric: .12, plumbing: .10, gypsum: .10, floor: .23, paint: .12, doors: .12, bath: .10 },
+  unitFactor: { apt: 1, duplex: 1.08, villa: 1.15 },
+  kitchenPerM: { hpl: 14000, acr: 19000, wood: 32000 },      // جنيه / متر طولي (سفلي + علوي)
+  dressPerM2: { eco: 9000, mid: 12000, lux: 15000, slux: 21000 }, // جنيه / م² واجهة
+  cladPerM2:  { eco: 2200, mid: 3200, lux: 4500, slux: 6500 },    // جنيه / م² تجليد
+  spread: 0.12   // نطاق التقدير ± 12%
+};
+
+/* ============ الترجمة ============ */
+const I18N = {
+ar:{},  // النص العربي مكتوب في الصفحة نفسها ويُقرأ تلقائياً
+en:{
+brand:"Al Mubarak",brandSub:"Finishing · Interiors · Woodwork",navServices:"Services",navProjects:"Projects",navTools:"Planning tools",navAreas:"Areas",navGuide:"Guide",navCta:"Book a visit",
+heroEyebrow:"Apartments & villas · New Cairo and Nasr City",heroTitle:"Finishing and furniture<br>from <em>one workshop</em><br>to key handover",
+heroLead:"From plastering and wiring to the kitchen, dressing room and wall cladding — every piece of woodwork is built in our own workshop, so your home is consistent and one team is accountable.",
+ctaCost:"Estimate your finishing cost",ctaWork:"See our work",fact1:"In-house woodwork shop",fact2:"Itemised written quote",fact3:"On-site survey",elevCap1:"Reception wall section — wood cladding + TV unit",
+wsEyebrow:"Why Al Mubarak",wsTitle:"Our woodwork isn't subcontracted",wsP1:"Most finishing companies hand kitchens and dressing rooms to outside workshops, and it shows in the fit, the finish and the schedule. We build every wooden piece in our own workshop, so design, production and installation stay in one pair of hands.",
+wsP2:"The result: materials and tones that match across the home, measurements taken on site, and one warranty.",
+m1:"Kitchens",m1s:"HPL · acrylic · solid wood",m2:"Dressing rooms",m2s:"Open or closed, with lighting",m3:"Bedrooms",m3s:"Beds, wardrobes, nightstands",m4:"Dining",m4s:"Tables and buffets",m5:"Receptions & entrances",m5s:"TV units and consoles",m6:"Wall cladding",m6s:"Solid wood and wood alternatives",
+svEyebrow:"Services",svTitle:"Every finishing stage under one contract",svLead:"Order a full turnkey finish, or separate items depending on your unit's condition.",
+s1:"Full turnkey finishing",s1p:"From bare brick to the last piece of furniture, with a schedule and a written quote.",s2:"Interior design",s2p:"Layout plan, materials and colour board, and 3D design before execution.",
+s3:"Electrical & plumbing",s3p:"Full installation with certified materials and panels sized to the unit's loads.",s4:"Plaster, gypsum board & ceilings",s4p:"Plumb, square plastering; suspended ceilings with recessed and hidden lighting.",
+s5:"Flooring, ceramics & marble",s5p:"Porcelain, marble, parquet and HDF — with correct falls in bathrooms and kitchens.",s6:"Paint & wall finishes",s6p:"Plastic and velvet paints, wallpaper, wood and faux-marble cladding.",
+s7:"Kitchens & storage",s7p:"Built in our workshop with hydraulic hinges, fittings and the finish you choose.",s8:"Dressing, bedrooms & full furniture",s8p:"Made-to-measure furniture that matches the unit's doors and cladding.",
+pjEyebrow:"Portfolio",pjTitle:"Projects in New Cairo and Nasr City",pjLead:"Each project gets its own page with before/after photos, execution stages and the materials used.",
+sample:"Sample",p1:"Apartment — Fifth Settlement",p2:"Villa — El Shorouk",p3:"Kitchen — Nasr City",dArea:"Area",dLevel:"Level",dTime:"Duration",dLen:"Length",dMat:"Material",
+p1t:"4 months",p2t:"7 months",p3t:"3 weeks",p3m:"Acrylic + quartz",c1:"Full finishing",c2:"Wood cladding",c3:"Kitchen",c4:"Marble",c5:"Suspended ceilings",c6:"Dressing room",c7:"Workshop-built",c8:"LED lighting",
+tlEyebrow:"Planning tools",tlTitle:"Plan your finish before you call us",tlLead:"Work out areas and an estimated cost, build a colour scheme, find the style closest to your taste — then send the result to us on WhatsApp.",
+tabCost:"Cost estimator",tabArea:"Area calculator",tabColor:"Colour matcher",tabStyle:"Find your style",
+unitType:"Unit type",apt:"Apartment",duplex:"Duplex",villa:"Villa",areaM:"Unit area",level:"Finish level",eco:"Economy",mid:"Standard",lux:"Lux",slux:"Super lux",items:"Items needed",
+kitchenLen:"Kitchen length",mLin:"lin. m",kitchenMat:"Kitchen material",hpl:"HPL",acr:"Acrylic",woodNat:"Solid wood",dressing:"Dressing / wardrobe front",claddings:"Wall cladding",
+estTotal:"Estimated cost",costNote:"An indicative estimate based on Cairo market prices, not a final quote. The final price is set after the site survey and once materials and brands are chosen.",
+sendWa:"Send estimate on WhatsApp",sendWa2:"Send result on WhatsApp",copyRes:"Copy result",
+len:"Length",wid:"Width",hei:"Ceiling height",doors:"Doors",wins:"Windows",tile:"Tile size",coats:"Paint coats",waste:"Waste allowance",
+areaNote:"We subtract 1.9 m² per door and 1.5 m² per window from the wall area. Paint coverage is 10 m² per litre per coat.",
+floorArea:"Floor area",wallNet:"Net wall area",ceil:"Ceiling",paintL:"Paint (walls + ceiling)",tilesNeed:"Tiles incl. waste",plaster:"Plastering",skirt:"Skirting",
+areaNote2:"Figures are for one rectangular room. Split irregular rooms into rectangles and add them up.",
+pickBase:"Pick your main wall colour",custom:"Or choose your own",scheme:"Scheme",calm:"Calm",harm:"Harmonious",contrast:"Contrast",
+palNote:"Tap a colour to copy its code. Screen colours differ from real walls — ask for a paint sample before approving.",roomPrev:"Living room preview",
+yourStyle:"Your closest style",keyMats:"Suggested materials",
+prEyebrow:"How we work",prTitle:"From the first call to key handover",prLead:"Each stage is handed over and signed off before the next begins, so you always know what's done and what's next.",
+st1:"Survey",st1p:"Site visit, measurements, and understanding your needs and budget.",st2:"Design",st2p:"Layout, 3D design and a materials board.",st3:"Quote & contract",st3p:"Written prices per item, material and brand, plus a schedule.",
+st4:"Execution",st4p:"A site engineer, weekly photo updates, and woodwork built in parallel at the workshop.",st5:"Handover & warranty",st5p:"Item-by-item handover and a written warranty on works and woodwork.",
+arEyebrow:"Areas we cover",arTitle:"East Cairo and the new cities",ar1:"Nasr City",ar1s:"All districts",ar2:"New Cairo",ar2s:"Fifth & First Settlement · Rehab · Madinaty",ar3:"New cities",ar3s:"El Shorouk · Badr · Mostakbal · New Capital",
+gdEyebrow:"Finishing guide",gdTitle:"Questions we hear every week",gdLead:"Short answers to help you decide before you start.",
+g1:"What's the difference between Lux and Super Lux?",g1p:"It's more about materials than workmanship: the porcelain or marble grade, sanitary and electrical brands, the paint and ceilings. Our quotes name the brand for every item so you can compare properly.",
+g2:"How long does a full finish take?",g2p:"A 150 m² apartment usually takes 3–5 months depending on level; villas 6 months or more. Woodwork is built in our workshop in parallel, which saves time.",
+g3:"Kitchen first or flooring first?",g3p:"The right order: electrical and plumbing rough-in, plaster, ceilings, flooring, first paint coats, woodwork and kitchen installation, then the final coat. Kitchen measurements are taken after plaster and tiling.",
+g4:"HPL, acrylic or solid wood for the kitchen?",g4p:"HPL resists scratches best and costs less. Acrylic is glossy and easy to clean but shows scratches. Solid wood looks richest and lasts longest but needs more care.",
+g5:"How do I avoid cost overruns?",g5p:"Approve the design and materials before work starts and ask for a quote by item, quantity and brand. Any later change goes into a priced addendum before it's done.",
+g6:"How does payment work?",g6p:"Instalments tied to stages: a deposit on signing, a payment as each stage is handed over, and the last one after final handover.",
+ctEyebrow:"Contact",ctTitle:"Book an on-site survey",ctSub:"Fill in your details and a ready WhatsApp message opens. We reply the same working day.",
+whatsapp:"WhatsApp",email:"Email",hours:"Hours",hoursV:"Sat – Thu · 10 am – 8 pm",copy:"Copy",fName:"Name",fPhone:"Mobile",fArea:"Area",other:"Other",fService:"Service",fNotes:"Extra details",fSubmit:"Prepare WhatsApp message",openWa:"Open WhatsApp",copyMsg:"Copy message",
+foot:"© 2026 Al Mubarak Finishing, Interiors & Woodwork",foot2:"Nasr City · New Cairo · New cities"
+}};
+const AR_EXTRA = { // نصوص تظهر من الكود
+ egp:"جنيه",m2:"م²",litres:"لتر",boxesOf:"م² ≈",mLin:"م.ط",
+ i_plaster:"محارة",i_electric:"كهرباء",i_plumbing:"سباكة",i_gypsum:"جبس بورد وأسقف",i_floor:"أرضيات وسيراميك",i_paint:"دهانات",i_doors:"أبواب وشبابيك",i_bath:"أدوات صحية ومطبخ",
+ kitchenItem:"المطبخ",dressItem:"الدريسنج / الدواليب",cladItem:"تجاليد الحوائط",range:"النطاق المتوقع",pickItems:"اختار بند واحد على الأقل",
+ copied:"تم النسخ",copyFail:"انسخ النص يدوياً",
+ waCost:"مرحباً المبارك، عملت تقدير على موقعكم:",waStyle:"مرحباً المبارك، الستايل الأقرب لذوقي:",waHello:"مرحباً المبارك، عايز أستفسر عن التشطيب.",
+ errReq:"اكتب الاسم ورقم الموبايل.",msgHead:"طلب معاينة — المبارك",
+ col_base:"الحائط",col_light:"السقف",col_deep:"حائط مميز",col_acc:"لمسة",col_wood:"خشب",
+ nile:"النيل",mNasr:"مدينة نصر",mNew:"القاهرة الجديدة",mShor:"الشروق",mCap:"العاصمة الإدارية",
+ lvl:"المستوى",unit:"الوحدة",area:"المساحة",total:"الإجمالي",name:"الاسم",phone:"الموبايل",region:"المنطقة",service:"الخدمة",notes:"تفاصيل"
+};
+const EN_EXTRA = {
+ egp:"EGP",m2:"m²",litres:"L",boxesOf:"m² ≈",mLin:"lin. m",
+ i_plaster:"Plastering",i_electric:"Electrical",i_plumbing:"Plumbing",i_gypsum:"Gypsum & ceilings",i_floor:"Flooring & tiles",i_paint:"Painting",i_doors:"Doors & windows",i_bath:"Sanitary fittings",
+ kitchenItem:"Kitchen",dressItem:"Dressing / wardrobes",cladItem:"Wall cladding",range:"Expected range",pickItems:"Pick at least one item",
+ copied:"Copied",copyFail:"Select and copy the text",
+ waCost:"Hello Al Mubarak, I made an estimate on your site:",waStyle:"Hello Al Mubarak, my closest style is:",waHello:"Hello Al Mubarak, I'd like to ask about finishing.",
+ errReq:"Enter your name and mobile number.",msgHead:"Site survey request — Al Mubarak",
+ col_base:"Walls",col_light:"Ceiling",col_deep:"Feature wall",col_acc:"Accent",col_wood:"Wood",
+ nile:"Nile",mNasr:"Nasr City",mNew:"New Cairo",mShor:"El Shorouk",mCap:"New Capital",
+ lvl:"Level",unit:"Unit",area:"Area",total:"Total",name:"Name",phone:"Mobile",region:"Area",service:"Service",notes:"Details"
+};
+Object.assign(I18N.en, EN_EXTRA);
+let lang = "ar";
+// اقرأ النص العربي من الصفحة
+document.querySelectorAll("[data-t]").forEach(el=>{const k=el.dataset.t; if(!(k in I18N.ar)) I18N.ar[k]= el.hasAttribute("data-html")? el.innerHTML : el.textContent;});
+Object.assign(I18N.ar, AR_EXTRA);
+const t = k => (I18N[lang][k] ?? I18N.ar[k] ?? k);
+
+/* ============ أدوات مساعدة ============ */
+const $ = s => document.querySelector(s);
+const fmt = n => Math.round(n).toLocaleString("en-US");
+const num = (el, d=0) => { const v = parseFloat(el.value); return isFinite(v) && v>=0 ? v : d; };
+const store = { get(k){try{return localStorage.getItem(k)}catch(e){return null}}, set(k,v){try{localStorage.setItem(k,v)}catch(e){}} };
+const waLink = text => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(text)}`;
+let toastT;
+function toast(msg){const el=$("#toast");el.textContent=msg;el.classList.add("on");clearTimeout(toastT);toastT=setTimeout(()=>el.classList.remove("on"),1800);}
+async function copyText(txt){ try{ await navigator.clipboard.writeText(txt); toast(t("copied")); } catch(e){ toast(t("copyFail")); } }
+function segInit(id, onChange){ const seg=$(id); seg.addEventListener("click",e=>{const b=e.target.closest("button"); if(!b) return; seg.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed", x===b)); onChange(b.dataset.v);}); return ()=>seg.querySelector('[aria-pressed="true"]').dataset.v; }
+
+/* ============ التبويبات ============ */
+const tabs=[...document.querySelectorAll('[role="tab"]')];
+function selectTab(id){ tabs.forEach(b=>{const on=b.id===id; b.setAttribute("aria-selected",on); document.getElementById(b.getAttribute("aria-controls")).hidden=!on;}); store.set("mb-tab",id); }
+tabs.forEach(b=>b.addEventListener("click",()=>selectTab(b.id)));
+$("#ctaCost").addEventListener("click",()=>selectTab("tab-cost"));
+
+/* ============ حاسبة التكلفة ============ */
+const ITEM_KEYS = Object.keys(CONFIG.shares);
+$("#cItems").innerHTML = ITEM_KEYS.map(k=>`<label><input type="checkbox" id="ci-${k}" value="${k}" checked><span data-x="i_${k}"></span></label>`).join("");
+let unitType="apt";
+segInit("#unitSeg", v=>{unitType=v; calcCost();});
+let lastCostText="";
+function calcCost(){
+  const area=num($("#cArea"),0), lvl=$("#cLevel").value;
+  const base = CONFIG.levelRate[lvl]*CONFIG.unitFactor[unitType]*area;
+  const rows=[];
+  ITEM_KEYS.forEach(k=>{ if($("#ci-"+k).checked) rows.push([t("i_"+k), base*CONFIG.shares[k]]); });
+  const kl=num($("#cKitchen")); if(kl>0) rows.push([`${t("kitchenItem")} (${kl} ${t("mLin")})`, kl*CONFIG.kitchenPerM[$("#cKMat").value]]);
+  const dr=num($("#cDress")); if(dr>0) rows.push([`${t("dressItem")} (${dr} ${t("m2")})`, dr*CONFIG.dressPerM2[lvl]]);
+  const cl=num($("#cClad")); if(cl>0) rows.push([`${t("cladItem")} (${cl} ${t("m2")})`, cl*CONFIG.cladPerM2[lvl]]);
+  const total=rows.reduce((s,r)=>s+r[1],0);
+  if(!total){ $("#cTotal").textContent="—"; $("#cRange").textContent=t("pickItems"); $("#cRows").innerHTML=""; return; }
+  const lo=total*(1-CONFIG.spread), hi=total*(1+CONFIG.spread);
+  $("#cTotal").innerHTML = `${fmt(total)}<small>${t("egp")}</small>`;
+  $("#cRange").textContent = `${t("range")}: ${fmt(lo)} – ${fmt(hi)} ${t("egp")}`;
+  const max=Math.max(...rows.map(r=>r[1]));
+  $("#cRows").innerHTML = rows.map(([n,v])=>`<div class="row num"><span>${n}</span><span>${fmt(v)}</span><div class="bar"><i style="width:${(v/max*100).toFixed(1)}%"></i></div></div>`).join("");
+  const lvlName=$("#cLevel").selectedOptions[0].textContent, unitName=$("#unitSeg [aria-pressed=true]").textContent;
+  lastCostText = `${t("waCost")}\n${t("unit")}: ${unitName} — ${t("area")}: ${area} ${t("m2")} — ${t("lvl")}: ${lvlName}\n` + rows.map(([n,v])=>`• ${n}: ${fmt(v)} ${t("egp")}`).join("\n") + `\n${t("total")}: ${fmt(total)} ${t("egp")} (${fmt(lo)} – ${fmt(hi)})`;
+  $("#cSend").href = waLink(lastCostText);
+}
+["#cArea","#cLevel","#cKitchen","#cKMat","#cDress","#cClad","#cItems"].forEach(s=>$(s).addEventListener("input",calcCost));
+$("#cCopy").addEventListener("click",()=>copyText(lastCostText));
+
+/* ============ حاسبة المساحات ============ */
+function calcArea(){
+  const L=num($("#aL")),W=num($("#aW")),H=num($("#aH")),D=num($("#aD")),Wn=num($("#aWin"));
+  const floor=L*W, gross=2*(L+W)*H, walls=Math.max(0,gross-D*1.9-Wn*1.5), ceil=floor;
+  const coats=+$("#aCoats").value, waste=+$("#aWaste").value, tileA=+$("#aTile").value;
+  const litres=(walls+ceil)*coats/10;
+  const tilesM2=floor*(1+waste), pcs=Math.ceil(tilesM2/tileA);
+  const skirt=Math.max(0,2*(L+W)-D*0.9);
+  const m2=t("m2");
+  $("#aFloor").innerHTML=`${floor.toFixed(2)}<small>${m2}</small>`;
+  $("#aWalls").innerHTML=`${walls.toFixed(1)}<span>${m2}</span>`;
+  $("#aCeil").innerHTML=`${ceil.toFixed(1)}<span>${m2}</span>`;
+  $("#aPaint").innerHTML=`${Math.ceil(litres)}<span>${t("litres")}</span>`;
+  $("#aTiles").innerHTML=`${tilesM2.toFixed(1)}<span>${m2} · ${pcs} ${lang==="ar"?"بلاطة":"tiles"}</span>`;
+  $("#aPlast").innerHTML=`${(walls+ceil).toFixed(1)}<span>${m2}</span>`;
+  $("#aSkirt").innerHTML=`${skirt.toFixed(1)}<span>${lang==="ar"?"م.ط":"m"}</span>`;
+}
+document.querySelectorAll("#pn-area input, #pn-area select").forEach(el=>el.addEventListener("input",calcArea));
+
+/* ============ منسق الألوان ============ */
+const SWATCHES=["#EDE6DA","#D8CBB6","#C7B299","#B9A48A","#A8A39A","#8C918A","#9AA8A0","#7E8C7A","#A9B5BF","#6F7F8C","#C9A9A0","#A1786B"];
+const hex2hsl=h=>{let r=parseInt(h.slice(1,3),16)/255,g=parseInt(h.slice(3,5),16)/255,b=parseInt(h.slice(5,7),16)/255;const mx=Math.max(r,g,b),mn=Math.min(r,g,b);let H=0,S=0,Lg=(mx+mn)/2;if(mx!==mn){const d=mx-mn;S=Lg>.5?d/(2-mx-mn):d/(mx+mn);H=mx===r?(g-b)/d+(g<b?6:0):mx===g?(b-r)/d+2:(r-g)/d+4;H*=60;}return [H,S*100,Lg*100];};
+const hsl2hex=(h,s,l)=>{h=((h%360)+360)%360;s=Math.max(0,Math.min(100,s))/100;l=Math.max(0,Math.min(100,l))/100;const k=n=>(n+h/30)%12,a=s*Math.min(l,1-l),f=n=>l-a*Math.max(-1,Math.min(k(n)-3,Math.min(9-k(n),1)));return "#"+[f(0),f(8),f(4)].map(x=>Math.round(x*255).toString(16).padStart(2,"0")).join("");};
+let baseCol="#D8CBB6", scheme="calm";
+$("#swatches").innerHTML=SWATCHES.map(c=>`<button type="button" style="background:${c}" data-c="${c}" aria-label="${c}" aria-pressed="${c===baseCol}"></button>`).join("");
+$("#swatches").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;baseCol=b.dataset.c;$("#colPick").value=baseCol.toLowerCase();markSw();paint();});
+$("#colPick").addEventListener("input",e=>{baseCol=e.target.value;markSw();paint();});
+function markSw(){document.querySelectorAll("#swatches button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.c.toLowerCase()===baseCol.toLowerCase()));}
+segInit("#schemeSeg",v=>{scheme=v;paint();});
+let pal={};
+function paint(){
+  const [h,s,l]=hex2hsl(baseCol);
+  const light=hsl2hex(h,s*.5,Math.min(96,l+14));
+  let deep,acc;
+  if(scheme==="calm"){ deep=hsl2hex(h,s*.9,Math.max(18,l-28)); acc=hsl2hex(h+15,Math.min(40,s+8),Math.max(30,l-38)); }
+  else if(scheme==="warm"){ deep=hsl2hex(h+32,Math.min(45,s+10),Math.max(22,l-26)); acc=hsl2hex(h-30,Math.min(50,s+18),Math.max(30,l-30)); }
+  else { deep=hsl2hex(h+180,Math.min(30,s*.7+10),Math.max(20,l-40)); acc=hsl2hex(h+200,Math.min(55,s+25),Math.max(32,l-30)); }
+  const wood = l>55 ? "#9C7552" : "#C8A27C";
+  pal={base:baseCol,light,deep,acc,wood};
+  $("#palette").innerHTML=[["base",baseCol],["light",light],["deep",deep],["acc",acc],["wood",wood]].map(([k,c])=>`<button type="button" data-c="${c}"><i style="background:${c}"></i><span><b>${t("col_"+k)}</b><em>${c.toUpperCase()}</em></span></button>`).join("");
+  const S=(id,attr,v)=>document.getElementById(id).setAttribute(attr,v);
+  S("rBack","fill",baseCol); S("rLeft","fill",hsl2hex(h,s,Math.max(0,l-8))); S("rRight","fill",hsl2hex(h,s,Math.max(0,l-5)));
+  S("rCeil","fill",light); S("rPanel","fill",deep); S("rFloor","fill",wood);
+  S("rRug","fill",hsl2hex(h,s*.4,Math.min(92,l+6))); S("rSofaBack","fill",hsl2hex(h,s*.3,Math.max(20,l-30))); S("rSofa","fill",hsl2hex(h,s*.3,Math.max(24,l-24)));
+  S("rPillow","fill",acc); S("rTable","fill",hsl2hex(30,30,28)); S("rArt","fill",acc); S("rFrame","stroke","#2f2a25"); S("rLamp","stroke","#2f2a25"); S("rLamp","fill",light);
+  const g=$("#rFloorLines"); g.setAttribute("stroke","#000"); if(!g.childElementCount){ let h2=""; for(let i=1;i<9;i++){const x0=130+i*340/9,x1=i*600/9;h2+=`<line x1="${x0}" y1="300" x2="${x1}" y2="400"/>`;} g.innerHTML=h2; }
+}
+$("#palette").addEventListener("click",e=>{const b=e.target.closest("button");if(b)copyText(b.dataset.c.toUpperCase());});
+
+/* ============ اختيار الستايل ============ */
+const STYLES={
+ modern:{ar:["مودرن","خطوط مستقيمة، أسطح ناعمة، وإضاءة مخفية. مناسب لو بتحب البيت عملي وأنيق ومن غير تفاصيل زيادة."],en:["Modern","Straight lines, smooth surfaces and hidden lighting. Suits you if you want a practical, sleek home without extra detail."],sw:["#ECEAE6","#B9B2A8","#3C3A37","#A47A57"],mats:{ar:["بورسلين مط كبير","أكريليك أو لاكيه","جبس بورد بإضاءة خطية","تجليد خشب شرائح"],en:["Large matte porcelain","Acrylic or lacquer","Gypsum with linear lights","Slatted wood cladding"]}},
+ classic:{ar:["كلاسيك","كرانيش وبانوهات وأخشاب غامقة ونجف. فخامة تقليدية مناسبة للمساحات الواسعة والفيلات."],en:["Classic","Cornices, wall panels, dark woods and chandeliers. Traditional luxury for large spaces and villas."],sw:["#EFE6D6","#C9B48F","#6B4A2E","#9C7A43"],mats:{ar:["رخام طبيعي","خشب زان أو أرو","كرانيش جبس","ورق حائط مطبوع"],en:["Natural marble","Beech or oak","Plaster cornices","Patterned wallpaper"]}},
+ neo:{ar:["نيو كلاسيك","بانوهات بسيطة وألوان فاتحة مع لمسات ذهبي. يجمع فخامة الكلاسيك وهدوء المودرن."],en:["Neo-classic","Simple wall panels, light tones and touches of gold. Classic elegance with modern calm."],sw:["#F2EEE7","#D9CDB9","#8C8478","#B8975A"],mats:{ar:["بورسلين شبه رخام","بانوهات فوم أو خشب","مقابض ذهبي مط","دهان قطيفة"],en:["Marble-look porcelain","Foam or wood panels","Brushed gold handles","Velvet paint"]}},
+ minimal:{ar:["مينيمال","ألوان قليلة، تخزين مخفي، ومساحات فاضية مقصودة. مناسب للي بيحب الهدوء وسهولة التنظيف."],en:["Minimal","Few colours, hidden storage and deliberate empty space. For people who like calm and easy cleaning."],sw:["#F4F3F0","#DAD6CF","#9A958C","#C2A988"],mats:{ar:["مايكروسمنت","خشب فاتح طبيعي","أبواب دواليب بدون مقابض","إضاءة دافية غير مباشرة"],en:["Microcement","Light natural wood","Handleless cabinet doors","Warm indirect lighting"]}}
+};
+const QUIZ=[
+ {ar:"إيه الإحساس اللي عايزه أول ما تدخل البيت؟",en:"How should the home feel when you walk in?",o:[["هدوء ونظافة","Calm and clean",{minimal:2,modern:1}],["فخامة وهيبة","Grand and luxurious",{classic:2,neo:1}],["أناقة دافية","Warm elegance",{neo:2,modern:1}],["عصري وعملي","Contemporary and practical",{modern:2,minimal:1}]]},
+ {ar:"أنهي ألوان تشدك أكتر؟",en:"Which colours draw you most?",o:[["أبيض ورمادي فاتح","White and light grey",{minimal:2,modern:1}],["بيج وذهبي","Beige and gold",{neo:2,classic:1}],["بني غامق وكريمي","Dark brown and cream",{classic:2}],["رمادي فحمي وخشب","Charcoal and wood",{modern:2}]]},
+ {ar:"رأيك في التفاصيل والزخارف؟",en:"How do you feel about detail and ornament?",o:[["كل ما قلّت أحسن","The less the better",{minimal:2,modern:1}],["بسيطة ومدروسة","Simple and considered",{neo:1,modern:1}],["بانوهات وكرانيش هادية","Subtle panels and cornices",{neo:2}],["زخارف ونجف","Ornament and chandeliers",{classic:2}]]},
+ {ar:"الوحدة بتاعتك؟",en:"Your unit?",o:[["شقة أقل من 120 م²","Apartment under 120 m²",{minimal:1,modern:1}],["شقة 120–200 م²","Apartment 120–200 m²",{modern:1,neo:1}],["دوبلكس أو بنتهاوس","Duplex or penthouse",{neo:1,modern:1}],["فيلا","Villa",{classic:1,neo:1}]]}
+];
+let answers=[0,1,1,1];
+function renderQuiz(){
+  $("#quiz").innerHTML=QUIZ.map((q,i)=>`<fieldset><legend>${q[lang]}</legend><div class="seg" data-q="${i}">${q.o.map((o,j)=>`<button type="button" data-v="${j}" aria-pressed="${answers[i]===j}">${lang==="ar"?o[0]:o[1]}</button>`).join("")}</div></fieldset>`).join("");
+}
+$("#quiz").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;const i=+b.parentElement.dataset.q;answers[i]=+b.dataset.v;b.parentElement.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===b));calcStyle();});
+function calcStyle(){
+  const sc={modern:0,classic:0,neo:0,minimal:0};
+  answers.forEach((a,i)=>{const w=QUIZ[i].o[a][2];for(const k in w)sc[k]+=w[k];});
+  const best=Object.keys(sc).sort((a,b)=>sc[b]-sc[a])[0], S=STYLES[best];
+  $("#sName").textContent=S[lang][0]; $("#sDesc").textContent=S[lang][1];
+  $("#sSw").innerHTML=S.sw.map(c=>`<i style="background:${c}"></i>`).join("");
+  $("#sMats").innerHTML=S.mats[lang].map(m=>`<span>${m}</span>`).join("");
+  $("#sSend").href=waLink(`${t("waStyle")} ${S[lang][0]}\n${S.mats[lang].join(" · ")}`);
+}
+
+/* ============ التواصل ============ */
+$("#waNum").textContent=CONFIG.phoneDisplay;
+$("#waFloat").href=waLink(t("waHello"));
+document.querySelectorAll("[data-copy]").forEach(b=>b.addEventListener("click",()=>copyText(CONFIG.phoneDisplay)));
+let lastMsg="";
+$("#ctForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  const name=$("#fName").value.trim(), phone=$("#fPhone").value.trim();
+  if(!name||!phone){ $("#fErr").textContent=t("errReq"); $("#fErr").hidden=false; return; }
+  $("#fErr").hidden=true;
+  const sel=id=>$(id).selectedOptions[0].textContent;
+  lastMsg=`${t("msgHead")}\n${t("name")}: ${name}\n${t("phone")}: ${phone}\n${t("region")}: ${sel("#fArea")}\n${t("unit")}: ${sel("#fUnit")}\n${t("service")}: ${sel("#fService")}`+($("#fNotes").value.trim()?`\n${t("notes")}: ${$("#fNotes").value.trim()}`:"");
+  $("#fPrev").textContent=lastMsg; $("#fWa").href=waLink(lastMsg); $("#fOut").hidden=false;
+});
+$("#fCopy").addEventListener("click",()=>copyText(lastMsg));
+
+/* ============ تبديل اللغة ============ */
+function applyLang(l){
+  lang=l; const root=document.documentElement;
+  root.lang=l; root.dir=l==="ar"?"rtl":"ltr";
+  document.querySelectorAll("[data-t]").forEach(el=>{const v=t(el.dataset.t); if(el.hasAttribute("data-html")) el.innerHTML=v; else el.textContent=v;});
+  document.querySelectorAll("[data-x]").forEach(el=>el.textContent=t(el.dataset.x));
+  ["mNasr","mNew","mShor","mCap"].forEach(id=>document.getElementById(id).textContent=t(id));
+  $("#mNile").textContent=t("nile");
+  $("#langBtn").textContent=l==="ar"?"English":"العربية";
+  document.title = l==="ar"?"شركة المبارك":"Al Mubarak";
+  $("#waFloat").href=waLink(t("waHello"));
+  store.set("mb-lang",l);
+  renderQuiz(); calcCost(); calcArea(); paint(); calcStyle();
+  if(lastMsg) $("#ctForm").requestSubmit();
+}
+$("#langBtn").addEventListener("click",()=>applyLang(lang==="ar"?"en":"ar"));
+
+/* ============ تشغيل ============ */
+const savedTab=store.get("mb-tab"); if(savedTab&&document.getElementById(savedTab)) selectTab(savedTab);
+applyLang(store.get("mb-lang")==="en"?"en":"ar");
+</script>
+
+</body>
+</html>
